@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+
+  <head>
+    <title>Missing Song</title>
+
+    <meta http-equiv="Content-Security-Policy" content="default-src
+    'self'
+    'unsafe-inline'
+    https://www.youtube.com
+    https://apis.google.com
+    https://content.googleapis.com
+    https://content-youtube.googleapis.com
+    https://i.ytimg.com
+  ">
+
+  <meta name="viewport" content="width=device-width, initial-scale=0.8">
+
+    <script src="https://apis.google.com/js/client.js?onload=onGoogleLoad"></script>
+  </head>
+
+  <body>
+<!-- ========================================= -->
+    <div class="overlay">
+      <header style="display:flex">
+        <div class="header-box">
+          <img id="ytimage" src="/images/Space Youtube 3.png">
+          <hr>
+          <img src="/images/MPST 1.png" alt="">
+          <h1 style="text-shadow: 3px 3px 3px blueviolet;">Missing Playlist Song Tracker</h1>
+        </div>
+      </header>
+    </div>
+
+<!-- ========================================= -->   
+
+    <article>
+      <p>Use this application to identify missing songs from a given YouTube playlist by comparing it to an old version of the playlist stored on your device.
+      </p>
+
+      <p>
+        <b>Note:</b> Since an "original" version of a playlist is required for comparison, you must first query a playlist and Register it (download it as a JSON file), which you can do here. 
+        Once you have downloaded registries of any playlist you wish to track, you may revisit this application any time in the future and query your playlist again if you notice songs have been made unavailable, and then Load your original playlist registry to identify which songs are missing.
+      </p>
+    </article>
+
+<!-- ========================================= -->   
+    <main id="main">
+
+      <section id="form">
+        <span style="color: lightblue; padding: 8px">Enter username to gather your playlists. Query a playlist to review the songs to register or compare it with an uploaded playlist registry.</span>
+        <fieldset>
+          <label for="user">YouTube Username:</label>
+          <input type="text" name="user" id="username" value="Varokus">
+          <img src="/images/arrow-right.png" alt="" width="40" height="25">
+          <button style="font-size: 18px;" id="get-playlists" onclick="Playlists.get(window.event)">Get Playlists</button>
+          <div style="float:right; margin: 20px" title="This will embed all queried songs/videos on the page and render them playable (slows down query)">
+            <label for="embed-video" style="font-family: Courier;
+            font-size: 1.3rem;">Embed Videos?</label>
+            <input type="checkbox" name="embed-video" id="embed-video" onclick="embedVideo = this.checked">
+          </div>
+          <hr>
+          <span id="message1" class="message"></span>
+          <h4 style="text-align: center;
+          margin: auto; text-decoration: underline;" >Playlists</h4>
+          <fieldset class="playlist-field">
+            <ul id="playlists">
+    
+            </ul>
+          </fieldset>
+        </fieldset>
+
+
+
+      </section>
+
+<!-- ========================================= -->   
+
+      <section id="originalPlaylist">
+        <div class="original-buttons">
+          <button id="compare" class="button1" onclick="Playlists.compare()">Compare</button>
+          <input type="file" id="file" onchange="Playlists.original.load()">
+          <button class="button2 clear" onclick="Playlists.original.clear()">Clear</button>
+        </div>
+
+        <span id="message2" class="message"></span>
+        <h2>Original Playlist</h2>
+          <div class="headers">
+            <h3>Song</h3>
+            <h3>Uploader</h3>
+          </div>
+          <ol id="original-list" class="song-listing">
+
+          </ol>
+      </section>
+
+<!-- ========================================= -->
+
+      <section id="currentPlaylist">
+        <button id="register" class="button1" onclick="Playlists.current.register();">Register</button>
+        <button class="button2" onclick="Playlists.current.clear();">Clear</button>
+
+        <span id="message3" class="message"></span>
+        <h2>Current Playlist</h2>
+          <div class="headers">
+            <h3>Song</h3>
+            <h3 id="playlist-title"></h3>
+            <h3>Uploader</h3>
+          </div>
+
+          <ol id="current-list" class="song-listing">
+
+          </ol>
+
+      </section>
+<!-- ========================================= -->    
+    </main>
+<!-- ========================================= -->    
+    <footer>
+      <!-- <div class="footer-list"> -->
+        <a href="https://varkous.com" title="Visit home page">Varkous</a>
+        <a href="https://github.com/Varkous/mpst" title="Github repository">MPST Repository</a>
+        <a href="#" title="Creator email">varkous@protonmail.com</a>
+      <!-- </div> -->
+    </footer>  
+  </body>
+</html>
+
+<!-- ========================================= -->      
+<link rel="stylesheet" type="text/css" href="index.css">
+
+<script src="index.js"></script>
+
+<!-- ========================================= -->      

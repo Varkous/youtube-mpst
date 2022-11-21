@@ -1,0 +1,260 @@
+body {
+  background: black;
+  padding: 0px;
+  margin: 0px;
+}
+
+header {
+  background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(44, 31, 156, 0.9) 48%, rgba(207, 31, 119, 0.7) 100%);
+  min-height: 400px;
+  margin-bottom: 100px;
+  width: 100%;
+  border: 2px double black;
+  box-shadow: inset 3px 3px 13px 8px black;
+  border-radius: 50px;
+} .overlay {
+  background: url("/images/chaos_album.png");
+  background-size: cover;
+  background-repeat: round;
+  border-radius: 50px;
+  box-shadow: 3px 3px 13px 8px gray;
+} #ytimage {
+  filter: blur(1px);
+  max-width: 300px; 
+  margin-left: 100px;
+}
+.header-box {
+  display: flow-root;
+  margin: auto;
+  padding: 15px;
+  text-align-last: justify;
+  font-family:'Courier New', Courier, monospace
+} .header-box h1 {
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+hr {
+  border-style: double;
+  border-top: ridge;
+  box-shadow: 4px 8px 82px 16px blue;
+}
+
+article {
+  color: lightslategray;
+  padding: 25px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  max-width: 1300px;
+  margin: auto;
+}
+p {
+  font-size: 1.2rem;
+}
+main {
+  display: flex;
+  padding: 15px;
+  flex-flow: wrap;
+  min-height: 1000px;
+  /* background-image: url('/images/music-form 2.png'); */
+  background-image: linear-gradient(45deg,
+  rgba(0, 0, 0, 0.7),
+  rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/images/music-form 2.png');
+
+  background-position: 400px;
+  background-size: contain;
+}
+
+#form {
+  /* box-shadow: 4px 6px 25px 4px gray; */
+  background: rgba(0,0,0,0.8);
+  flex-flow: wrap;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  font-size: 25px;
+  padding: 10px;
+  margin-bottom: 40px;
+} fieldset {
+  /* width: 100%; */
+  font-family: Helvetica;
+  color: white;
+} 
+.message {
+  font-size: 1.2rem;
+  padding: 10px;
+}
+#username {
+  font-size: large;
+}
+.playlist-field {
+  max-width: 100%;
+  transition: width 1s;
+  width: auto;
+  background-size: contain;
+  margin: 10px;
+  background-image:
+    linear-gradient(45deg,
+    rgba(2,0,36,0.7),
+     rgba(44, 31, 156, 1), rgba(207, 31, 119, 0.7)), url(
+     "/images/chaos_album.png");
+  border-radius: 10px;
+}
+#playlists {
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 40px;
+} .play-listing {
+    background: rgba(0,0,0,0.6);
+    border-radius: 5px;
+    min-height: 120px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: none !important;
+    margin: 10px !important;
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    padding: 5px;
+    display: flex;
+} .play-listing:hover {
+    border-color: steelblue;
+    box-shadow: inset 1px 1px 8px 2px lightblue;;
+} .play-listing:hover .playlist-inputs {
+    display: flex;
+} .playlist-inputs {
+    position: absolute;
+    right: 0;
+    margin-left: auto;
+    max-height: 50px;
+    justify-content: space-between;
+} .playlist-inputs button {
+    background: rgba(45,45,45,0.8);
+    border: 2px solid gray;
+    font-family: monospace;
+    font-size: 1.2rem;
+    margin: 10px;
+} .playlist-inputs button:hover {
+    box-shadow: 2px 2px 5px 2px;
+} .playlist-inputs button:active {
+    box-shadow: 1px 1px 1px;
+    border-right:none;
+    border-bottom:none;
+} 
+.add-song {
+  color: darkturquoise;
+}
+.remove {
+  color: brown;
+} .remove img {
+  width: 17px;
+  filter: contrast(0.1);
+  box-shadow: 2px 2px 12px 1px red;
+}
+
+section {
+  background: rgb(20, 20, 20);
+  padding: 25px;
+  margin: auto;
+  width: 700px;
+  min-width: 350px;
+  border-radius: 12px;
+  box-shadow: 3px 5px 10px 6px black;
+}
+
+.button1 {
+  font-size: larger;
+  float: left;
+}
+
+.button2 {
+  font-size: larger;
+  float: right;
+}
+.song-listing {
+  overflow: auto;
+  max-height: 1200px;
+}
+#originalPlaylist {
+  border: 2px double lightblue;
+  color: lightblue;
+} #originalPlaylist h2 {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    
+} .original-buttons {
+    display: flex;
+    justify-content: space-around;
+}
+#file {
+  border: 3px solid lightblue;
+}
+
+#currentPlaylist {
+  border: 2px double purple;
+} #currentPlaylist h2 {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    margin: 10px;
+    color: purple;
+}
+li::marker {
+  color: white;
+}
+li {
+  font-size: 20px;
+  color: deepskyblue;
+  border: 2px solid gray;
+  background: black;
+  padding: 3px;
+  height: 50px;
+} span {
+  color: gray;
+} .headers {
+    display: flex;
+    justify-content: space-around;
+    margin: 0px 10px 0px 10px;
+    border: 4px double dimgray;
+} .headers h3 {
+    color: white;
+    border: 3px double dimgray;
+    padding: 3px;
+    margin: 1px;
+} #playlist-title {
+    text-align: center;
+    color: dodgerblue;
+    font-size: 1.5rem;
+    margin: auto;
+    min-width: 250px;
+}
+
+a {
+  color:rgb(70, 129, 238);
+  text-decoration: none;
+} a:hover {
+  color: lightblue;
+}
+span {
+  font-style: bold;
+}
+.missing {
+  border-color: red !important;
+  color: gray;
+}
+footer {
+  border: 3px double gray;
+  width: 100%;
+  color: gray;
+  box-shadow: inset 3px 2px 12px gray;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 80px;
+} footer a {
+    color: deepskyblue;
+    font-family: system-ui !important;
+    font-variant: all-petite-caps;
+    font-size: 1.1rem;
+    transition: all 1s;
+    text-shadow: -11px -10px 8px lightblue;
+} footer a:hover {
+    transition: all 1s;
+    text-shadow: 0px 0px 0px lightblue;
+}
