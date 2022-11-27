@@ -240,7 +240,7 @@ function MakePlayListing(item: any) {
     </a>
     <div class="playlist-inputs" hidden>
       <button class="add-song" onclick="Playlists.current.clear(); Playlists.query_songs('AIzaSyCI6kajNUTHjsx1Z2xYSPj9A4RNdUd4r_0', '${item.id}', 50)">Query Songs</button>
-      <button class="remove" onclick="RemoveListing(this.parentNode.parentNode)"><img src="/images/trash-small.png"></button>
+      <button class="remove" onclick="Playlists.remove_listing(this.parentNode.parentNode)"><img src="/images/trash-small.svg"></button>
     </div>  
   </li>`
 }  

@@ -131,7 +131,7 @@ main {
 } .playlist-inputs button {
     background: rgba(45,45,45,0.8);
     border: 2px solid gray;
-    font-family: monospace;
+    font-family: 'ui-monospace';
     font-size: 1.2rem;
     margin: 10px;
 } .playlist-inputs button:hover {
