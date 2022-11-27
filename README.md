@@ -5,7 +5,8 @@ Application for comparing original YouTube playlists with current ones to identi
 
 # Instructions
 
-Enter Youtube Username at select Get Playlists
+Download the zip file, unzip into any folder, and open the index.html file.
+Enter Youtube Username, then click Get Playlists
 (data will be populated after a few moments)
 
 Hover a playlist and select Query Songs
