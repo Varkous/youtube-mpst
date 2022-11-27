@@ -27,10 +27,13 @@ header {
   display: flow-root;
   margin: auto;
   padding: 15px;
-  text-align-last: justify;
+  justify-content: center;
   font-family:'Courier New', Courier, monospace
 } .header-box h1 {
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+} #title {
+  display: flex;
+  flex-flow: column;
 }
 hr {
   border-style: double;
